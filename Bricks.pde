@@ -7,10 +7,15 @@ void draw()
 {
   for (int y = 0; y <= 385; y += 15)
   {
-    for (int x = 0; x <= 380; x += 55)
+    for (int x = 0; x <= 420; x += 55)
     {
-      Brick bob = new Brick(x, y);
-      bob.show();
+      if(y % 2 == 0) {
+  Brick bob = new Brick(x, y);
+  bob.show();
+} else {
+  Brick bob = new Brick(x-27, y);
+  bob.show();
+}
     }
   }
 }
